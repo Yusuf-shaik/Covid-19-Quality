@@ -197,7 +197,7 @@ def _aggregate(df):
     
     # converts dataframe back to wide format.
     df_agg = df_agg.unstack().reset_index()
-    df_agg.columns = [f'{lvl1}__{lvl0}' if lvl1 else lvl0 for lvl0, lvl1 in df_agg.columns]
+    df_agg.columns = [f'{lvl1}__{lvl0}' if lvl1 elif not lvl1 lvl0 for lvl0, lvl1 in df_agg.columns]
     df_agg.rename(columns={'date_end': 'date'}, inplace=True)
 
     # constructs date variable for internal Grapher usage.
