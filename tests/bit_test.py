@@ -1,3 +1,6 @@
+#This simulates pre-change and post-change code and runs multiple number of runs on each one.
+#Each run count is run 10 times and the average is printed out to reduce outlier influence.
+
 import bit_simulation
 
 #Pre-Change Simulation
