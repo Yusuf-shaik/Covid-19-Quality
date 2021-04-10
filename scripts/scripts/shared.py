@@ -21,11 +21,13 @@ zero_day = datetime.strptime(ZERO_DAY, "%Y-%m-%d")
 # Utilities
 # =========
 
-def _find_closest_year_row(df, year=2020):
+covid_start_year = 2020
+
+def _find_closest_year_row(df, year):
     """Returns the row which is closest to the year specified (in either direction)"""
     df = df.copy()
     df['year'] = df['year'].sort_values(ascending=True)
-    return df.loc[df['year'].map(lambda x: abs(x - 2020)).idxmin()]
+    return df.loc[df['year'].map(lambda x: abs(x - year)).idxmin()]
 
 
 # ============
