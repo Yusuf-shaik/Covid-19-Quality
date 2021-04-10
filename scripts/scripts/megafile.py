@@ -70,7 +70,7 @@ def get_jhu():
                 "weekly_cases_per_million": "new_cases_smoothed_per_million",
                 "weekly_deaths_per_million": "new_deaths_smoothed_per_million"
             })
-        else:
+        elif not jhu_var[:7] == "weekly_":
             tmp[jhu_var] = tmp[jhu_var].round(3)
         data_frames.append(tmp)
     print()
