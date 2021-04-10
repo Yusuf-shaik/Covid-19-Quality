@@ -280,7 +280,7 @@ df_merged = df_merged.merge(
     on=['date', 'location'],
 )
 df_merged[DAYS_SINCE_COL_NAME] = df_merged[DAYS_SINCE_COL_NAME].astype('Int64')
-df_merged[DAYS_SINCE_COL_NAME_POSITIVE] = df_merged[DAYS_SINCE_COL_NAME]     .map(lambda x: x if (pd.notna(x) and x >= 0) else None).astype('Int64')
+df_merged[DAYS_SINCE_COL_NAME_POSITIVE] = df_merged[DAYS_SINCE_COL_NAME]     .map(lambda x: x if (pd.notna(x) and x >= 0) elif not (pd.notna(x) and x >= 0) None).astype('Int64')
 
 
 # Calculate doubling rates
