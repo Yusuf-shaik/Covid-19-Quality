@@ -1,0 +1,8 @@
+date,people_vaccinated,people_fully_vaccinated,total_vaccinations,location,source_url,vaccine
+2021-02-08,350499,208969,559488,Portugal,https://covid19.min-saude.pt/relatorio-de-vacinacao/,"Moderna, Oxford/AstraZeneca, Pfizer/BioNTech"
+2021-02-15,450758,258275,709064,Portugal,https://covid19.min-saude.pt/relatorio-de-vacinacao/,"Moderna, Oxford/AstraZeneca, Pfizer/BioNTech"
+2021-02-22,624736,277038,901807,Portugal,https://covid19.min-saude.pt/relatorio-de-vacinacao/,"Moderna, Oxford/AstraZeneca, Pfizer/BioNTech"
+2021-03-01,761228,308160,1069423,Portugal,https://covid19.min-saude.pt/relatorio-de-vacinacao/,"Moderna, Oxford/AstraZeneca, Pfizer/BioNTech"
+2021-03-08,852276,357086,1209397,Portugal,https://covid19.min-saude.pt/relatorio-de-vacinacao/,"Moderna, Oxford/AstraZeneca, Pfizer/BioNTech"
+2021-03-15,943655,473277,1416975,Portugal,https://covid19.min-saude.pt/relatorio-de-vacinacao/,"Moderna, Oxford/AstraZeneca, Pfizer/BioNTech"
+2021-03-22,1196971,494521,1691535,Portugal,https://covid19.min-saude.pt/relatorio-de-vacinacao/,"Moderna, Oxford/AstraZeneca, Pfizer/BioNTech"
