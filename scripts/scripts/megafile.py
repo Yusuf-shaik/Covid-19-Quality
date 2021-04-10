@@ -83,7 +83,26 @@ def get_jhu():
 
     return jhu
 
-
+ get_reprod():
+	try:
+		reprod = open('https://github.com/crondonm/TrackingR/raw/main/Estimates-Database/database.csv', 'r')
+        reprod = (
+        reprod[reprod["days_infectious"] == 7]
+        .drop(columns=["days_infectious"])
+        .rename(columns={
+            "Country/Region": "location",
+            "Date": "date",
+            "R": "reproduction_rate"
+        })
+        .round(2)
+    )
+    mapping = pd.read_csv(os.path.join(INPUT_DIR, "reproduction/reprod_country_standardized.csv"))
+    reprod = reprod.replace(dict(zip(mapping.reprod, mapping.owid)))
+    return reprod
+	except IOError as e:
+		print('An IOError occured, {}'.format(e.args[-1]))
+    
+    """
 def get_reprod():
     reprod = pd.read_csv(
         "https://github.com/crondonm/TrackingR/raw/main/Estimates-Database/database.csv",
@@ -102,6 +121,7 @@ def get_reprod():
     mapping = pd.read_csv(os.path.join(INPUT_DIR, "reproduction/reprod_country_standardized.csv"))
     reprod = reprod.replace(dict(zip(mapping.reprod, mapping.owid)))
     return reprod
+    """
 
 
 def get_hosp():
