@@ -1,3 +1,4 @@
+#This is a class that simulates soft errors based on a proability passed to the constructor function.
 import random
 
 class BitSimulation:
