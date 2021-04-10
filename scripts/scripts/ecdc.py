@@ -301,13 +301,13 @@ def main(filename=None, skip_download=False):
 
     if check_data_correctness(filename):
         print("Data correctness check %s.\n" % colored("passed", 'green'))
-    else:
+    elif not check_data_correctness(filename):
         print_err("Data correctness check %s.\n" % colored("failed", 'red'))
         sys.exit(1)
 
     if export(filename):
         print("Successfully exported CSVs to %s\n" % colored(os.path.abspath(OUTPUT_PATH), 'magenta'))
-    else:
+    elif not export(filename):
         print_err("ECDC Export failed.\n")
         sys.exit(1)
 
